@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+  <script type="text/javascript" src="../node_modules/axios/dist/axios.js"></script>
+
+</head>
+<body>
+
+
+<button id="aa">getgetgetget</button>
+<div>
+  <img id="headImg">
+</div>
+
+<script>
+
+
+  var date = new Date();
+  var day = date.getDate();
+  var month = date.getMonth() + 1;
+  var year = date.getFullYear();
+  var nowDate = year + '-' + month + '-' + day
+
+
+
+  var get = document.getElementById('aa')
+  get.addEventListener('click',function (evt) {
+    axios({
+      method : 'get',
+      url : 'http://localhost:8080/api/agencyManager/2/lifephotos/2016-12-6/2017-12-6'
+    }).then(function (res) {
+
+
+        res.uploadDate
+
+
+
+
+
+
+
+
+      console.log(res);
+    }).catch(function (res) {
+      console.log('失败了！！');
+
+    })
+  })
+
+
+
+</script>
+</body>
+</html>
